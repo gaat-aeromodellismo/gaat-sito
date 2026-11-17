@@ -1,10 +1,12 @@
 # CONFIGURAZIONE INIZIALE: sostituire NOME_ACCOUNT/NOME_REPOSITORY
 # e configurare il servizio OAuth GitHub prima dell'accesso al CMS.
+
 backend:
   name: github
   repo: gaat-aeromodellismo/gaat-sito
   branch: main
-  base_url: https://INSERIRE-ENDPOINT-OAUTH
+  base_url: https://gaat-cms-oauth.alessandro-delbene.workers.dev
+  auth_endpoint: auth
 media_folder: assets/uploads
 public_folder: /assets/uploads
 locale: it
