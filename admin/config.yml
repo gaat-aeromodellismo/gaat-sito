@@ -1,0 +1,39 @@
+# CONFIGURAZIONE INIZIALE: sostituire NOME_ACCOUNT/NOME_REPOSITORY
+# e configurare il servizio OAuth GitHub prima dell'accesso al CMS.
+backend:
+  name: github
+  repo: NOME_ACCOUNT/NOME_REPOSITORY
+  branch: main
+  base_url: https://INSERIRE-ENDPOINT-OAUTH
+media_folder: assets/uploads
+public_folder: /assets/uploads
+locale: it
+collections:
+  - name: news
+    label: Notizie
+    files:
+      - name: news
+        label: Elenco notizie
+        file: content/news.json
+        fields:
+          - label: Notizie
+            name: items
+            widget: list
+            fields:
+              - {label: Titolo, name: title, widget: string}
+              - {label: Data, name: date, widget: datetime, date_format: YYYY-MM-DD, time_format: false, format: YYYY-MM-DD}
+              - {label: Descrizione, name: description, widget: text}
+  - name: events
+    label: Eventi
+    files:
+      - name: events
+        label: Elenco eventi
+        file: content/events.json
+        fields:
+          - label: Eventi
+            name: items
+            widget: list
+            fields:
+              - {label: Titolo, name: title, widget: string}
+              - {label: Data, name: date, widget: datetime, date_format: YYYY-MM-DD, time_format: false, format: YYYY-MM-DD}
+              - {label: Descrizione, name: description, widget: text}
