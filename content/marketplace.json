@@ -1,4 +1,14 @@
-
 {
-  "items": []
+  "items": [
+    {
+      "status": "Disponibile",
+      "title": "Vendo Extra 330 elettrico",
+      "category": "Aeromodelli",
+      "price": 200,
+      "description": "Extra330 HorizonHobby elettrico batterie 4S",
+      "image": "/assets/uploads/peregrine70.jpg",
+      "seller": "Alessandro Del Bene",
+      "contact": "3358136154"
+    }
+  ]
 }
