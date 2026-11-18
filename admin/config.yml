@@ -39,3 +39,29 @@ collections:
               - {label: Titolo, name: title, widget: string}
               - {label: Data, name: date, widget: datetime, date_format: YYYY-MM-DD, time_format: false, format: YYYY-MM-DD}
               - {label: Descrizione, name: description, widget: text}
+
+  - name: marketplace
+    label: Mercatino
+    files:
+      - name: marketplace
+        label: Elenco annunci
+        file: content/marketplace.json
+        fields:
+          - label: Annunci
+            name: items
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - {label: Titolo, name: title, widget: string}
+              - {label: Categoria, name: category, widget: select, options: [Aeromodelli, Motori, Radiocomandi, Elettronica, Accessori, Altro]}
+              - {label: Prezzo EUR, name: price, widget: number, value_type: float, min: 0}
+              - {label: Descrizione, name: description, widget: text}
+              - {label: Fotografia principale, name: image, widget: image, required: false}
+              - label: Altre fotografie
+                name: images
+                widget: list
+                required: false
+                field: {label: Fotografia, name: image, widget: image}
+              - {label: Venditore, name: seller, widget: string}
+              - {label: Contatto, name: contact, widget: string}
+              - {label: Stato, name: status, widget: select, options: [Disponibile, Riservato, Venduto], default: Disponibile}
